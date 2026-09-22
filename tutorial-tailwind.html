@@ -24,28 +24,29 @@
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR: Urut dari Config -> Utility Dasar -> Styling Lengkap -->
   <nav id="navbar" class="sticky top-0 bg-white/95 backdrop-blur border-b p-4 text-sm flex gap-4 overflow-x-auto z-50">
-    <a href="#config" class="hover:text-blue-600 font-medium">Config</a>
-    <a href="#warna" class="hover:text-blue-600 font-medium">Warna</a>
-    <a href="#spacing" class="hover:text-blue-600 font-medium">Spacing</a>
-    <a href="#sizing" class="hover:text-blue-600 font-medium">Sizing</a>
-    <a href="#teks" class="hover:text-blue-600 font-medium">Teks</a>
-    <a href="#border" class="hover:text-blue-600 font-medium">Border</a>
-    <a href="#flexbox" class="hover:text-blue-600 font-medium">Flexbox</a>
-    <a href="#grid" class="hover:text-blue-600 font-medium">Grid</a>
-    <a href="#responsive" class="hover:text-blue-600 font-medium">Responsive</a>
-    <a href="#states" class="hover:text-blue-600 font-medium">States</a>
+    <a href="#config" class="hover:text-blue-600 font-medium">1. Config</a>
+    <a href="#utility" class="hover:text-blue-600 font-medium">2. Utility Class</a>
+    <a href="#warna" class="hover:text-blue-600 font-medium">3. Warna</a>
+    <a href="#teks" class="hover:text-blue-600 font-medium">4. Teks</a>
+    <a href="#spacing" class="hover:text-blue-600 font-medium">5. Spacing</a>
+    <a href="#sizing" class="hover:text-blue-600 font-medium">6. Sizing</a>
+    <a href="#border" class="hover:text-blue-600 font-medium">7. Border</a>
+    <a href="#flexbox" class="hover:text-blue-600 font-medium">8. Flexbox</a>
+    <a href="#grid" class="hover:text-blue-600 font-medium">9. Grid</a>
+    <a href="#responsive" class="hover:text-blue-600 font-medium">10. Responsive</a>
+    <a href="#states" class="hover:text-blue-600 font-medium">11. States</a>
   </nav>
 
   <div class="max-w-3xl mx-auto p-6 space-y-14">
 
     <h1 class="font-heading text-3xl font-bold">Belajar Tailwind CSS</h1>
 
-    <!-- ===== 0. CONFIG (CUSTOM WARNA & FONT) ===== -->
+    <!-- ===== 1. SETUP CONFIG (CUSTOM WARNA & FONT) ===== -->
     <section id="config">
-      <h2 class="font-heading text-xl font-bold mb-2">0. Custom Config (Font & Warna Kustom)</h2>
-      <p class="mb-3 text-sm text-gray-600">Elemen di bawah ini menggunakan nilai extend yang kamu daftarkan di config.</p>
+      <h2 class="font-heading text-xl font-bold mb-2">1. Setup Config (Font & Warna Kustom)</h2>
+      <p class="mb-3 text-sm text-gray-600">Menyiapkan konfigurasi awal di <code>tailwind.config.js</code> atau via <code>@theme</code> sebelum mulai mendesain.</p>
       
       <div class="space-y-3">
         <!-- Custom Font Glory -->
@@ -69,9 +70,31 @@
       </div>
     </section>
 
-    <!-- ===== 1. WARNA ===== -->
+    <!-- ===== 2. STRUKTUR DASAR UTILITY CLASS ===== -->
+    <section id="utility">
+      <h2 class="font-heading text-xl font-bold mb-2">2. Struktur Dasar Utility Class</h2>
+      <p class="mb-3 text-sm text-gray-600">Tailwind menganut konsep <strong>utility-first</strong>, yaitu merakit tampilan menggunakan class kecil dengan pola umum <code>{property}-{value}</code>.</p>
+
+      <div class="space-y-3">
+        <!-- Contoh Modul 2.4 -->
+        <div class="bg-green-100 border border-green-500 p-4 rounded">
+          <p class="text-green-700 font-medium">
+            Saya menggunakan utility class: bg-green-100, border-green-500, p-4, rounded, text-green-700, font-medium.
+          </p>
+        </div>
+
+        <div class="p-3 bg-slate-50 border rounded text-xs font-mono text-slate-700 space-y-1">
+          <p>• <strong>bg-green-100</strong> → background-color: #dcfce7;</p>
+          <p>• <strong>p-4</strong> → padding: 1rem (16px);</p>
+          <p>• <strong>rounded</strong> → border-radius: 0.25rem (4px);</p>
+          <p>• <strong>text-green-700</strong> → color: #15803d;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. WARNA & GRADIENTS ===== -->
     <section id="warna">
-      <h2 class="font-heading text-xl font-bold mb-2">1. Warna</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">3. Warna</h2>
       <p class="mb-3">Pola: <code>{property}-{warna}-{tingkat}</code>. 50 = terang, 900 = gelap.</p>
 
       <p class="text-sm text-gray-500 mb-1">Beberapa warna dan tingkat kecerahan</p>
@@ -133,9 +156,54 @@
       <button class="bg-blue-500 text-white px-4 py-2 rounded">Tombol Biru</button>
     </section>
 
-    <!-- ===== 2. SPACING (MARGIN & PADDING) ===== -->
+    <!-- ===== 4. TYPOGRAPHY / TEKS ===== -->
+    <section id="teks">
+      <h2 class="font-heading text-xl font-bold mb-2">4. Teks (Typography)</h2>
+
+      <p class="text-sm text-gray-500 mb-1">Ukuran</p>
+      <div class="space-y-1 mb-4">
+        <p class="text-sm">text-sm</p>
+        <p class="text-base">text-base</p>
+        <p class="text-xl">text-xl</p>
+        <p class="text-3xl">text-3xl</p>
+      </div>
+
+      <p class="text-sm text-gray-500 mb-1">Ketebalan</p>
+      <div class="space-y-1 mb-4">
+        <p class="font-light">font-light</p>
+        <p class="font-normal">font-normal</p>
+        <p class="font-semibold">font-semibold</p>
+        <p class="font-bold">font-bold</p>
+      </div>
+
+      <p class="text-sm text-gray-500 mb-1">Jenis font</p>
+      <div class="space-y-1 mb-4">
+        <p class="font-sans">font-sans (default sans-serif)</p>
+        <p class="font-serif">font-serif</p>
+        <p class="font-mono">font-mono</p>
+        <p class="font-heading font-semibold text-blue-600">font-heading (Poppins via config)</p>
+        <p class="font-glory text-2xl text-purple-700">font-glory (Give You Glory via config)</p>
+      </div>
+
+      <p class="text-sm text-gray-500 mb-1">Perataan</p>
+      <div class="border space-y-1 p-2 mb-4">
+        <p class="text-left">text-left</p>
+        <p class="text-center">text-center</p>
+        <p class="text-right">text-right</p>
+      </div>
+
+      <p class="text-sm text-gray-500 mb-1">Warna teks</p>
+      <div class="space-y-1">
+        <p class="text-red-500">text-red-500</p>
+        <p class="text-green-600">text-green-600</p>
+        <p class="text-blue-600">text-blue-600</p>
+        <p class="text-brand font-bold">text-brand (custom)</p>
+      </div>
+    </section>
+
+    <!-- ===== 5. SPACING (MARGIN & PADDING) ===== -->
     <section id="spacing">
-      <h2 class="font-heading text-xl font-bold mb-2">2. Margin & Padding</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">5. Margin & Padding</h2>
 
       <p class="text-sm text-gray-500 mb-1">m-4 (margin semua sisi)</p>
       <div class="border p-2">
@@ -194,9 +262,9 @@
       </div>
     </section>
 
-    <!-- ===== 3. SIZING ===== -->
+    <!-- ===== 6. SIZING (WIDTH & HEIGHT) ===== -->
     <section id="sizing">
-      <h2 class="font-heading text-xl font-bold mb-2">3. Sizing (Width & Height)</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">6. Sizing (Width & Height)</h2>
 
       <p class="text-sm text-gray-500 mb-1">Skala numerik (w-32, h-16)</p>
       <div class="w-32 h-16 bg-blue-300 p-2 text-xs mb-4 flex items-center justify-center font-mono">
@@ -219,54 +287,9 @@
       </div>
     </section>
 
-    <!-- ===== 4. TEKS ===== -->
-    <section id="teks">
-      <h2 class="font-heading text-xl font-bold mb-2">4. Teks (Typography)</h2>
-
-      <p class="text-sm text-gray-500 mb-1">Ukuran</p>
-      <div class="space-y-1 mb-4">
-        <p class="text-sm">text-sm</p>
-        <p class="text-base">text-base</p>
-        <p class="text-xl">text-xl</p>
-        <p class="text-3xl">text-3xl</p>
-      </div>
-
-      <p class="text-sm text-gray-500 mb-1">Ketebalan</p>
-      <div class="space-y-1 mb-4">
-        <p class="font-light">font-light</p>
-        <p class="font-normal">font-normal</p>
-        <p class="font-semibold">font-semibold</p>
-        <p class="font-bold">font-bold</p>
-      </div>
-
-      <p class="text-sm text-gray-500 mb-1">Jenis font</p>
-      <div class="space-y-1 mb-4">
-        <p class="font-sans">font-sans (default sans-serif)</p>
-        <p class="font-serif">font-serif</p>
-        <p class="font-mono">font-mono</p>
-        <p class="font-heading font-semibold text-blue-600">font-heading (Poppins via config)</p>
-        <p class="font-glory text-2xl text-purple-700">font-glory (Give You Glory via config)</p>
-      </div>
-
-      <p class="text-sm text-gray-500 mb-1">Perataan</p>
-      <div class="border space-y-1 p-2 mb-4">
-        <p class="text-left">text-left</p>
-        <p class="text-center">text-center</p>
-        <p class="text-right">text-right</p>
-      </div>
-
-      <p class="text-sm text-gray-500 mb-1">Warna teks</p>
-      <div class="space-y-1">
-        <p class="text-red-500">text-red-500</p>
-        <p class="text-green-600">text-green-600</p>
-        <p class="text-blue-600">text-blue-600</p>
-        <p class="text-brand font-bold">text-brand (custom)</p>
-      </div>
-    </section>
-
-    <!-- ===== 5. BORDER ===== -->
+    <!-- ===== 7. BORDER & RADIUS ===== -->
     <section id="border">
-      <h2 class="font-heading text-xl font-bold mb-2">5. Border & Radius</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">7. Border & Radius</h2>
 
       <p class="text-sm text-gray-500 mb-1">Ketebalan border</p>
       <div class="flex gap-3 mb-4">
@@ -299,9 +322,9 @@
       </div>
     </section>
 
-    <!-- ===== 6. FLEXBOX ===== -->
+    <!-- ===== 8. FLEXBOX LAYOUT ===== -->
     <section id="flexbox">
-      <h2 class="font-heading text-xl font-bold mb-2">6. Flexbox</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">8. Flexbox</h2>
 
       <p class="text-sm text-gray-500 mb-1">flex (dasar, arah default: baris)</p>
       <div class="flex gap-3 border p-3 mb-4">
@@ -354,9 +377,9 @@
       </div>
     </section>
 
-    <!-- ===== 7. GRID ===== -->
+    <!-- ===== 9. GRID LAYOUT ===== -->
     <section id="grid">
-      <h2 class="font-heading text-xl font-bold mb-2">7. Grid</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">9. Grid</h2>
 
       <p class="text-sm text-gray-500 mb-1">grid-cols-{n} + gap</p>
       <div class="grid grid-cols-3 gap-3 mb-4">
@@ -392,9 +415,9 @@
       </div>
     </section>
 
-    <!-- ===== 8. RESPONSIVE DESIGN ===== -->
+    <!-- ===== 10. RESPONSIVE DESIGN ===== -->
     <section id="responsive">
-      <h2 class="font-heading text-xl font-bold mb-2">8. Responsive Design</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">10. Responsive Design</h2>
       <p class="text-sm text-gray-500 mb-2">Prinsip Mobile-First: default (HP) → sm (640px) → md (768px) → lg (1024px).</p>
 
       <!-- Indikator Layar Aktif -->
@@ -420,9 +443,9 @@
       </div>
     </section>
 
-    <!-- ===== 9. STATE VARIANTS ===== -->
+    <!-- ===== 11. STATE VARIANTS ===== -->
     <section id="states">
-      <h2 class="font-heading text-xl font-bold mb-2">9. State Variants</h2>
+      <h2 class="font-heading text-xl font-bold mb-2">11. State Variants</h2>
       <p class="text-sm text-gray-500 mb-3">Pola: <code>{state}:{utility}</code> seperti hover (sorot mouse), focus (aktif/diklik), dan active (ditekan).</p>
 
       <div class="flex flex-wrap gap-4 items-center">

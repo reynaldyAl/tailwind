@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheat Sheet & Sandbox Tailwind CSS</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- Definisi Theme Custom v4 -->
+<style type="text/tailwindcss">
+  @theme {
+    --font-heading: "Poppins", sans-serif;
+    --font-glory: "Give You Glory", cursive;
+    --color-midnight: #121063;
+    --color-brand: #06b6d4;
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 p-4 sm:p-6 max-w-2xl mx-auto space-y-8">
+
+  <!-- NAVBAR COMPACT -->
+  <nav class="sticky top-2 bg-white/90 backdrop-blur border rounded-xl p-2.5 text-xs flex gap-3 overflow-x-auto shadow-sm z-50">
+    <a href="#config" class="hover:text-cyan-600 font-semibold">1.Config</a>
+    <a href="#utility" class="hover:text-cyan-600 font-semibold">2.Utility</a>
+    <a href="#warna" class="hover:text-cyan-600 font-semibold">3.Warna</a>
+    <a href="#teks" class="hover:text-cyan-600 font-semibold">4.Teks</a>
+    <a href="#spacing" class="hover:text-cyan-600 font-semibold">5.Spacing</a>
+    <a href="#sizing" class="hover:text-cyan-600 font-semibold">6.Sizing</a>
+    <a href="#border" class="hover:text-cyan-600 font-semibold">7.Border</a>
+    <a href="#flexbox" class="hover:text-cyan-600 font-semibold">8.Flex</a>
+    <a href="#grid" class="hover:text-cyan-600 font-semibold">9.Grid</a>
+    <a href="#responsive" class="hover:text-cyan-600 font-semibold">10.Responsif</a>
+    <a href="#states" class="hover:text-cyan-600 font-semibold">11.States</a>
+  </nav>
+
+  <header class="text-center space-y-1">
+    <h1 class="font-heading text-2xl font-bold text-slate-900">Lab Praktikum Tailwind CSS</h1>
+    <p class="text-xs text-slate-500">Ganti nama class pada elemen sesuai panduan komentar di setiap section.</p>
+  </header>
+
+  <!-- 1. CONFIG -->
+  <section id="config" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">1. Setup Config (@theme)</h2>
+    <!-- Sandbox: Coba ganti class bg-midnight (#121063) jadi bg-brand (#06b6d4) -->
+    <div class="p-3 bg-midnight text-white rounded">
+      <!-- Coba opsi font kustom: font-glory (cursive) | font-heading (poppins) -->
+      <p class="font-glory text-2xl">font-glory di atas bg-midnight</p>
+      <!-- Coba opsi warna teks kustom: text-brand | text-white -->
+      <p class="text-xs text-brand mt-1 font-mono">Variabel kustom aktif via tag &lt;style&gt;</p>
+    </div>
+  </section>
+
+  <!-- 2. UTILITY CLASS -->
+  <section id="utility" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">2. Struktur Utility ({property}-{value})</h2>
+    <!-- Sandbox: Coba ganti kombinasi: bg-amber-100 border-amber-500 text-amber-800 -->
+    <div class="bg-green-100 border border-green-500 text-green-800 p-3 rounded text-xs">
+      Pola: property-value (p-3 = 12px, border-green-500, text-green-800)
+    </div>
+  </section>
+
+  <!-- 3. WARNA & GRADIENTS -->
+  <section id="warna" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">3. Warna (Shade 50 - 950) & Gradient</h2>
+    <!-- Sandbox Shade: Coba ganti shade 500 ke 100, 300, 700, atau 900 -->
+    <div class="flex gap-2 text-center text-white text-xs font-semibold">
+      <div class="flex-1 bg-red-500 py-2 rounded">red-500</div>
+      <div class="flex-1 bg-blue-500 py-2 rounded">blue-500</div>
+      <div class="flex-1 bg-emerald-500 py-2 rounded">emerald-500</div>
+    </div>
+    <!-- Sandbox Gradient: Coba ganti arah: bg-gradient-to-r | to-l | to-t | to-b | to-br -->
+    <div class="h-9 rounded bg-gradient-to-r from-blue-500 via-indigo-500 to-brand flex items-center justify-center text-white text-xs font-medium">
+      bg-gradient-to-r from-blue-500 via-indigo-500 to-brand
+    </div>
+  </section>
+
+  <!-- 4. TEKS (TYPOGRAPHY) -->
+  <section id="teks" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">4. Teks (Ukuran, Bobot, Posisi)</h2>
+    <!-- Sandbox Typography:
+         - Ukuran : text-xs | text-sm | text-base | text-lg | text-2xl
+         - Bobot  : font-light | font-normal | font-semibold | font-bold
+         - Posisi : text-left | text-center | text-right
+         - Family : font-sans | font-serif | font-mono | font-heading | font-glory
+    -->
+    <p class="text-base font-semibold text-center text-slate-800 font-sans border p-2 rounded">
+      Ubah class saya: text-base font-semibold text-center font-sans
+    </p>
+  </section>
+
+  <!-- 5. SPACING -->
+  <section id="spacing" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">5. Spacing (Margin, Padding, Space-X)</h2>
+    <!-- Sandbox Margin & Padding: Coba ganti padding (p-1 s/d p-6) atau margin (m-2, mt-4, mb-2) -->
+    <div class="border border-dashed p-3 bg-slate-50">
+      <!-- Coba perataan tengah: mx-auto w-36 -->
+      <div class="bg-blue-200 text-blue-900 text-xs text-center p-2 mx-auto w-36 rounded">
+        mx-auto w-36 p-2
+      </div>
+    </div>
+    <!-- Coba jarak otomatis antar anak: space-x-2 | space-x-4 | space-x-8 -->
+    <div class="flex space-x-3 text-center text-xs">
+      <div class="flex-1 bg-green-200 p-1.5 rounded">space-x-3 (1)</div>
+      <div class="flex-1 bg-green-200 p-1.5 rounded">space-x-3 (2)</div>
+      <div class="flex-1 bg-green-200 p-1.5 rounded">space-x-3 (3)</div>
+    </div>
+  </section>
+
+  <!-- 6. SIZING -->
+  <section id="sizing" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">6. Sizing (Numerik, Fraksi, Special)</h2>
+    <!-- Sandbox Fraksi: Coba ubah w-1/2 & w-1/2 jadi w-1/3 & w-2/3, atau w-1/4 & w-3/4 -->
+    <div class="flex gap-2 h-9 text-xs font-mono text-white text-center">
+      <div class="w-1/2 bg-indigo-500 rounded flex items-center justify-center">w-1/2 (50%)</div>
+      <div class="w-1/2 bg-indigo-600 rounded flex items-center justify-center">w-1/2 (50%)</div>
+    </div>
+    <!-- Coba nilai khusus: w-fit | w-full | max-w-xs -->
+    <div class="w-fit max-w-xs bg-pink-100 text-pink-800 text-xs p-2 rounded">
+      w-fit max-w-xs (menyesuaikan isi, batas maks 320px)
+    </div>
+  </section>
+
+  <!-- 7. BORDER & RADIUS -->
+  <section id="border" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">7. Border & Radius</h2>
+    <!-- Sandbox Border & Radius:
+         - Ketebalan: border | border-2 | border-4 | border-8
+         - Warna    : border-gray-300 | border-red-500 | border-midnight
+         - Radius   : rounded-none | rounded-sm | rounded-lg | rounded-2xl | rounded-full
+    -->
+    <div class="border-2 border-midnight text-midnight text-xs text-center font-medium p-3 rounded-xl">
+      border-2 border-midnight rounded-xl (Coba ganti ke rounded-full atau border-4)
+    </div>
+  </section>
+
+  <!-- 8. FLEXBOX -->
+  <section id="flexbox" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">8. Flexbox Sandbox</h2>
+    <!-- Sandbox Flexbox:
+         - Direction: flex-row | flex-col | flex-row-reverse
+         - Justify  : justify-start | justify-center | justify-end | justify-between | justify-around
+         - Items    : items-start | items-center | items-end
+         - Wrap     : flex-wrap | flex-nowrap
+    -->
+    <div class="flex justify-between items-center bg-slate-100 p-2.5 rounded gap-2 text-xs">
+      <div class="bg-blue-500 text-white p-2 rounded">flex-1</div>
+      <!-- Coba posisi anak individual: self-start | self-center | self-end -->
+      <div class="bg-blue-600 text-white p-2 rounded">flex-2</div>
+      <!-- Coba dorong paksa ke pojok kanan pakai: ml-auto -->
+      <div class="bg-blue-700 text-white p-2 rounded">flex-3</div>
+    </div>
+  </section>
+
+  <!-- 9. GRID -->
+  <section id="grid" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">9. Grid Sandbox</h2>
+    <!-- Sandbox Grid:
+         - Jumlah Kolom: grid-cols-2 | grid-cols-3 | grid-cols-4 | grid-cols-6
+         - Jarak Celah : gap-1 | gap-2 | gap-4 | gap-x-4 gap-y-1
+    -->
+    <div class="grid grid-cols-3 gap-2 text-center text-xs font-medium text-white">
+      <!-- Coba rentang kolom: col-span-2 | col-span-full -->
+      <div class="bg-teal-500 p-2 rounded col-span-2">col-span-2</div>
+      <div class="bg-teal-600 p-2 rounded">1 Kolom</div>
+      <div class="bg-teal-700 p-2 rounded col-span-full">col-span-full (penuh 3 kolom)</div>
+    </div>
+  </section>
+
+  <!-- 10. RESPONSIVE DESIGN -->
+  <section id="responsive" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">10. Responsive (Mobile First)</h2>
+    <!-- Indikator Layar Aktif (sm: 640px, md: 768px, lg: 1024px) -->
+    <div class="p-2 bg-indigo-50 border border-indigo-200 text-center text-xs font-semibold text-indigo-900 rounded">
+      <span class="block sm:hidden text-rose-600">Layar HP (&lt; 640px)</span>
+      <span class="hidden sm:block md:hidden text-amber-600">Layar Tablet sm (&ge; 640px)</span>
+      <span class="hidden md:block text-emerald-600">Layar Desktop md/lg (&ge; 768px)</span>
+    </div>
+    <!-- Coba ubah susunan responsif: grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs text-slate-700 font-medium">
+      <div class="p-2 bg-slate-200 rounded">1 Kolom di HP</div>
+      <div class="p-2 bg-slate-200 rounded">3 Kolom di sm:</div>
+      <div class="p-2 bg-slate-200 rounded">Ubah ukuran browser!</div>
+    </div>
+  </section>
+
+  <!-- 11. STATE VARIANTS -->
+  <section id="states" class="bg-white p-4 rounded-xl border space-y-2">
+    <h2 class="font-heading text-sm font-bold text-slate-700">11. State Variants (hover:, focus:, active:)</h2>
+    <div class="flex flex-wrap gap-2 items-center">
+      <!-- Coba variasi state: hover:bg-blue-800 | active:scale-95 | active:bg-black -->
+      <button class="bg-midnight hover:bg-blue-800 active:scale-95 text-white text-xs px-3.5 py-2 rounded transition cursor-pointer">
+        Hover & Klik (active)
+      </button>
+      <!-- Coba variasi focus: focus:ring-4 focus:ring-cyan-300 focus:border-brand -->
+      <input type="text" placeholder="Klik untuk test focus..." class="border text-xs px-3 py-1.5 rounded focus:border-brand focus:ring-2 focus:ring-cyan-200 focus:outline-none transition w-48">
+    </div>
+  </section>
+
+</body>
+</html>
