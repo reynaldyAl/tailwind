@@ -12,20 +12,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<!-- Definisi Theme Custom (Sesuai tailwind.config.js) -->
-<style type="text/tailwindcss">
-  @theme {
-    --font-heading: "Poppins", sans-serif;
-    --font-glory: "Give You Glory", cursive;
-    --color-midnight: #121063;
-    --color-brand: #06b6d4;
-  }
-</style>
+<!-- Masukkan langsung tanpa link style.css terpisah -->
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: "Poppins", sans-serif;
+      --font-glory: "Give You Glory", cursive;
+      --color-midnight: #121063;
+      --color-brand: #06b6d4;
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
 
   <!-- NAVBAR: Urut dari Config -> Utility Dasar -> Styling Lengkap -->
-  <nav id="navbar" class="sticky top-0 bg-white/95 backdrop-blur border-b p-4 text-sm flex gap-4 overflow-x-auto z-50">
+  <nav id="navbar" class="sticky top-0 bg-white/95 backdrop-blur border-b p-4 text-sm flex gap-4 overflow-x-auto z-50 font-glory">
     <a href="#config" class="hover:text-blue-600 font-medium">1. Config</a>
     <a href="#utility" class="hover:text-blue-600 font-medium">2. Utility Class</a>
     <a href="#warna" class="hover:text-blue-600 font-medium">3. Warna</a>
@@ -67,6 +67,28 @@
             border & text brand
           </div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="flex flex-wrap flex-row m-10 p-10 border-slate-700 border-4 justify-center ">
+        1
+      </div>
+      <div class="flex flex-wrap m-10 p-10 border-slate-600 border-dashed border-4 bg-gradient-to-r from-red-400 via-yellow-300 to-slate-400">
+        <p class="m-10 p-10 border-slate-800 border-4 justify-center">1</p>
+        <p class="m-10 p-10 border-slate-800 border-4 justify-center">2</p>
+        <p class="m-10 p-10 border-slate-800 border-4 justify-center">3</p>
+        <p class="m-10 p-10 border-slate-500 border-4 items-start ">
+          4
+        </p>
+        <p class="m-10 p-10 border-slate-500 border-4 items-stretch ">
+          5
+        </p>
+        <p class="m-10 p-10 border-slate-500 border-4 order-4 ">
+          6
+        </p>
+
+        
       </div>
     </section>
 
