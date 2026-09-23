@@ -73,9 +73,6 @@
 
     <!-- ===== 2. STRUKTUR DASAR UTILITY CLASS ===== -->
     <section id="utility">
-      <h2 class="font-heading text-xl font-bold mb-2">2. Struktur Dasar Utility Class</h2>
-      <p class="mb-3 text-sm text-gray-600">Tailwind menganut konsep <strong>utility-first</strong>, yaitu merakit tampilan menggunakan class kecil dengan pola umum <code>{property}-{value}</code>.</p>
-
       <div class="space-y-3">
         <!-- Contoh Modul 2.4 -->
         <div class="bg-green-100 border border-green-500 p-4 rounded">
@@ -83,20 +80,72 @@
             Saya menggunakan utility class: bg-green-100, border-green-500, p-4, rounded, text-green-700, font-medium.
           </p>
         </div>
+    </section>
 
-        <div class="p-3 bg-slate-50 border rounded text-xs font-mono text-slate-700 space-y-1">
-          <p>• <strong>bg-green-100</strong> → background-color: #dcfce7;</p>
-          <p>• <strong>p-4</strong> → padding: 1rem (16px);</p>
-          <p>• <strong>rounded</strong> → border-radius: 0.25rem (4px);</p>
-          <p>• <strong>text-green-700</strong> → color: #15803d;</p>
-        </div>
+        <!-- ===== 5. SPACING (MARGIN & PADDING) ===== -->
+    <section id="spacing">
+      <h2 class="font-heading text-xl font-bold mb-2">5. Margin & Padding</h2>
+
+      <p class="text-sm text-gray-500 mb-1">m-4 (margin semua sisi)</p>
+      <div class="border p-2">
+        <div class="bg-blue-200 p-2 m-4 inline-block">Box</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">mt / mr / mb / ml (margin satu sisi)</p>
+      <div class="border p-2 flex gap-2">
+        <div class="bg-blue-200 p-2 mt-4">mt-4</div>
+        <div class="bg-blue-200 p-2 mr-4">mr-4</div>
+        <div class="bg-blue-200 p-2 mb-4">mb-4</div>
+        <div class="bg-blue-200 p-2 ml-4">ml-4</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">mx-4 (kiri+kanan) / my-4 (atas+bawah)</p>
+      <div class="border p-2 flex gap-2">
+        <div class="bg-blue-200 p-2 mx-4">mx-4</div>
+        <div class="bg-blue-200 p-2 my-4">my-4</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">mx-auto (di tengah horizontal)</p>
+      <div class="border p-2">
+        <div class="bg-blue-300 p-2 w-32 mx-auto text-center">mx-auto</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">p-4 (padding semua sisi)</p>
+      <div class="border p-2">
+        <div class="bg-green-200 p-4 inline-block">p-4</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">pt / pr / pb / pl (padding satu sisi)</p>
+      <div class="border p-2 flex gap-2">
+        <div class="bg-green-200 pt-4">pt-4</div>
+        <div class="bg-green-200 pr-4">pr-4</div>
+        <div class="bg-green-200 pb-4">pb-4</div>
+        <div class="bg-green-200 pl-4">pl-4</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">px-4 (horizontal) / py-4 (vertikal)</p>
+      <div class="flex gap-3">
+        <div class="bg-green-300 px-4 py-2">px-4 py-2</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">space-x-4 (jarak antar anak, horizontal)</p>
+      <div class="flex space-x-4 border p-2">
+        <div class="bg-blue-300 p-3">1</div>
+        <div class="bg-blue-300 p-3">2</div>
+        <div class="bg-blue-300 p-3">3</div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4 mb-1">space-y-4 (jarak antar anak, vertikal)</p>
+      <div class="flex flex-col space-y-4 border p-2 w-32">
+        <div class="bg-blue-300 p-3">1</div>
+        <div class="bg-blue-300 p-3">2</div>
+        <div class="bg-blue-300 p-3">3</div>
       </div>
     </section>
 
     <!-- ===== 3. WARNA & GRADIENTS ===== -->
     <section id="warna">
       <h2 class="font-heading text-xl font-bold mb-2">3. Warna</h2>
-      <p class="mb-3">Pola: <code>{property}-{warna}-{tingkat}</code>. 50 = terang, 900 = gelap.</p>
 
       <p class="text-sm text-gray-500 mb-1">Beberapa warna dan tingkat kecerahan</p>
       <div class="space-y-2 mb-4">
@@ -202,66 +251,7 @@
       </div>
     </section>
 
-    <!-- ===== 5. SPACING (MARGIN & PADDING) ===== -->
-    <section id="spacing">
-      <h2 class="font-heading text-xl font-bold mb-2">5. Margin & Padding</h2>
 
-      <p class="text-sm text-gray-500 mb-1">m-4 (margin semua sisi)</p>
-      <div class="border p-2">
-        <div class="bg-blue-200 p-2 m-4 inline-block">Box</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">mt / mr / mb / ml (margin satu sisi)</p>
-      <div class="border p-2 flex gap-2">
-        <div class="bg-blue-200 p-2 mt-4">mt-4</div>
-        <div class="bg-blue-200 p-2 mr-4">mr-4</div>
-        <div class="bg-blue-200 p-2 mb-4">mb-4</div>
-        <div class="bg-blue-200 p-2 ml-4">ml-4</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">mx-4 (kiri+kanan) / my-4 (atas+bawah)</p>
-      <div class="border p-2 flex gap-2">
-        <div class="bg-blue-200 p-2 mx-4">mx-4</div>
-        <div class="bg-blue-200 p-2 my-4">my-4</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">mx-auto (di tengah horizontal)</p>
-      <div class="border p-2">
-        <div class="bg-blue-300 p-2 w-32 mx-auto text-center">mx-auto</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">p-4 (padding semua sisi)</p>
-      <div class="border p-2">
-        <div class="bg-green-200 p-4 inline-block">p-4</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">pt / pr / pb / pl (padding satu sisi)</p>
-      <div class="border p-2 flex gap-2">
-        <div class="bg-green-200 pt-4">pt-4</div>
-        <div class="bg-green-200 pr-4">pr-4</div>
-        <div class="bg-green-200 pb-4">pb-4</div>
-        <div class="bg-green-200 pl-4">pl-4</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">px-4 (horizontal) / py-4 (vertikal)</p>
-      <div class="flex gap-3">
-        <div class="bg-green-300 px-4 py-2">px-4 py-2</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">space-x-4 (jarak antar anak, horizontal)</p>
-      <div class="flex space-x-4 border p-2">
-        <div class="bg-blue-300 p-3">1</div>
-        <div class="bg-blue-300 p-3">2</div>
-        <div class="bg-blue-300 p-3">3</div>
-      </div>
-
-      <p class="text-sm text-gray-500 mt-4 mb-1">space-y-4 (jarak antar anak, vertikal)</p>
-      <div class="flex flex-col space-y-4 border p-2 w-32">
-        <div class="bg-blue-300 p-3">1</div>
-        <div class="bg-blue-300 p-3">2</div>
-        <div class="bg-blue-300 p-3">3</div>
-      </div>
-    </section>
 
     <!-- ===== 6. SIZING (WIDTH & HEIGHT) ===== -->
     <section id="sizing">
