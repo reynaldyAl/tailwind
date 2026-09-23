@@ -1,0 +1,32 @@
+    <!-- study case -->
+    
+    <div class="grid grid-cols-2 grid-rows-2 gap-4 h-64 bg-slate-100 p-4 rounded-xl">
+      <!-- Kotak kiri: memakan 2 baris ke bawah -->
+      <div class="row-span-2 bg-blue-600 text-white p-4 rounded-lg flex items-center justify-center font-semibold">
+        Kotak Tinggi (Mengambil 2 Baris)
+      </div>
+
+      <!-- Kotak kanan atas -->
+      <div class="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-4 rounded-lg flex items-center justify-center">
+        Kotak Kanan Atas
+      </div>
+
+      <!-- Kotak kanan bawah -->
+      <div class="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-4 rounded-lg flex items-center justify-center">
+        Kotak Kanan Bawah
+      </div>
+    </div>
+
+    <!-- KOTAK 1: flex-nowrap (Default) - 3 item tetap dipaksa 1 baris -->
+    <div class="flex gap-2 border p-3 w-64 mb-4">
+      <div class="bg-yellow-300 p-2 text-center flex-1">Item 1</div>
+      <div class="bg-yellow-300 p-2 text-center flex-1">Item 2</div>
+      <div class="bg-yellow-300 p-2 text-center flex-1">Item 3</div>
+    </div>
+
+  <!-- KODE 2: Turun Semua ke Bawah (Satu per baris) & Rata Tengah -->
+  <div class="flex flex-wrap justify-center gap-2 border p-3 w-64">
+    <div class="bg-yellow-300 p-3 w-48 text-center">Item 1</div>
+    <div class="bg-yellow-300 p-3 w-48 text-center">Item 2</div>
+    <div class="bg-yellow-300 p-3 w-48 text-center">Item 3</div>
+  </div>
